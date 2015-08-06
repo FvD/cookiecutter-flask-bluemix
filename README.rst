@@ -29,10 +29,10 @@ Before you push to bluemix you may want to check two items:
 
 2. The settings in the manifest.yml file include the default app name and reserved memory. Please check those and change the settings to your own requirements.
 
-Once you have checked the two files above login to cloudfoundry with the cf-cli and then push your app
+Once you have checked the two files above login to cloudfoundry with the cf-cli and then push your app::
     
-    cf login
-    cf push 
+    $ cf login
+    $ cf push 
 
 Features
 --------

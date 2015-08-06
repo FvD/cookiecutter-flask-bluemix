@@ -1,0 +1,4 @@
+Vendor in your requirements, as per the cloudfoundry python-buildpack instructions::
+
+    # vendors all the pip *.tar.gz into vendor/
+    $ pip install --download vendor -r requirements.txt

@@ -1,9 +1,11 @@
 cookiecutter-flask-bluemix
 ===========================
 
-A Flask template for cookiecutter_ that will allow you app to be hosted on IBM Bluemix. It exactly the same as cookiecutter-flask_ by Steven Loria, with the additional manifest.yml and runtime files required by cloudfoundry on Bluemix.
+A Flask template for cookiecutter_ that will allow your app to be hosted on IBM Bluemix_. It exactly the same as cookiecutter-flask_ by Steven Loria, with the additional manifest.yml and runtime files required by cloudfoundry on Bluemix.
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
+
+.. _Bluemix: https://bluemix.net
 
 .. _cookiecutter-flask: https://github.com/sloria/cookiecutter-flask
 

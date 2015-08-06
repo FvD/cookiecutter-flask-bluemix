@@ -21,3 +21,4 @@ class UserFactory(BaseFactory):
 
     class Meta:
         model = User
+

@@ -17,13 +17,13 @@ Use it now
 ::
 
     $ pip install cookiecutter
-    $ cookiecutter https://github.com/sloria/cookiecutter-flask.git
+    $ cookiecutter https://github.com/FvD/cookiecutter-flask-bluemix.git
 
 You will be asked about your basic info (name, project name, app name, etc.). This info will be used in your new project.
 
 Push to Bluemix
 ---------------
-Before you push to bluemix you may want to check two items:
+Before you push to bluemix you may want to check (at least) two items:
 
 1. The runtime.txt file specifies python 3.4.3. You can change that to whatever you prefer
 

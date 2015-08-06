@@ -1,5 +1,5 @@
-cookiecutter-flask
-==================
+cookiecutter-flask-bluemix
+===========================
 
 A Flask template for cookiecutter_ that will allow you app to be hosted on IBM Bluemix. It exactly the same as cookiecutter-flask_ by Steven Loria, with the additional manifest.yml and runtime files required by cloudfoundry on Bluemix.
 
@@ -25,9 +25,9 @@ Push to Bluemix
 ---------------
 Before you push to bluemix you may want to check two items:
 
-    1. The runtime.txt file specifies python 3.4.3. You can change that to whatever you prefer
+1. The runtime.txt file specifies python 3.4.3. You can change that to whatever you prefer
 
-    2. The settings in the manifest.yml file include the default app name and reserved memory. Please check those and change the settings to your own requirements.
+2. The settings in the manifest.yml file include the default app name and reserved memory. Please check those and change the settings to your own requirements.
 
 Once you have checked the two files above login to cloudfoundry with the cf-cli and then push your app
     

@@ -7,4 +7,4 @@ env:
     SECRET: somethingverysecret
     ENV: prod
 command: python manage.py db upgrade
-command: gunicorn clusteringagent.app:create_app\(\) -b 0.0.0.0:$PORT -w 3
+command: gunicorn {{cookiecutter.app_name}}.app:create_app\(\) -b 0.0.0.0:$PORT -w 3

@@ -38,11 +38,26 @@ Once you have installed your DBMS, run the following to create your app's databa
 
 
 
-Deployment
-----------
+Bluemix Deployment
+-------------------
 
-In your production environment, make sure the ``{{cookiecutter.app_name|upper}}_ENV`` environment variable is set to ``"prod"``.
+In your production environment, make sure the ``{{cookiecutter.app_name|upper}}_ENV`` environment variable is set to ``"prod"`` through the manifest.yml file. You can also set the secret key for your production environment there (don't commit the yaml file GitHub in that case).
 
+
+Vendor in all your requirements by running inside your project folder:
+
+::
+
+    # vendors all the pip *.tar.gz into vendor/
+    pip install --download vendor -r requirements.txt
+
+Login to the cf commandline environment for your region (in the example we use UK)::
+
+    cf login -a api.eu-gb.bluemix.net
+
+then push the app (memory requirements are already in the yaml file)::
+
+    cf push {{ cookiecutter.project_name }}
 
 Shell
 -----

@@ -19,7 +19,16 @@ class ProdConfig(Config):
     """Production configuration."""
     ENV = 'prod'
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/example'  # TODO: Change me
+    # Example connection to ElephantSQL database. Don't forget to bind a 
+    # database service to your app. 
+    if 'VCAP_SERVICES' in os.environ:
+        postgres_service = json.loads(os.environ['VCAP_SERVICES'])['elephantsql'][0]
+        uri = postgres_service["credentials"]["uri"]
+        uri_strings = uri.split("/")
+        connection_string = uri_strings[2]
+        db_name = uri_strings[3]
+        SQLALCHEMY_DATABASE_URI = "postgresql://%s/%s" % (connection_string,
+                                                                   db_name)
     DEBUG_TB_ENABLED = False  # Disable Debug toolbar
 
 
